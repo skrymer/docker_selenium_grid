@@ -8,12 +8,17 @@
 * pip install robotframework
 * pip install robotframework-selenium2library
 
-Chrome driver
+## Chrome driver
+* download driver 
+* then move the file to /usr/bin directory `sudo mv chromedriver /usr/bin` 
+* then goto /usr/bin directory and execute `chmod a+x chromedriver` to mark it executable. 
 
-download driver then Move the file to /usr/bin directory "sudo mv chromedriver /usr/bin" and
-Goto /usr/bin directory and you execute "chmod a+x chromedriver" to mark it executable. 
+## Run without compose file
+First start the hub `docker run -d -P --name selenium-hub selenium/hub`
+Then start a chrome node `docker run -d --link selenium-hub:hub selenium/node-chrome`
 
-## Simple test
+
+
 
 
 
